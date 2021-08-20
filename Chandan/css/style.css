@@ -57,14 +57,14 @@ a:hover, a:focus {
 }
 
 body {
-  line-height: 25px;
+  line-height: 24px;
   font-size: 13px;
-  font-weight: 300;
+ 
   color: #333333;
-  letter-spacing: .025em;
+ 
 /*   font-family: "Raleway", sans-serif; */
   font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
-}
+
 }
 
 body.light_bg {
