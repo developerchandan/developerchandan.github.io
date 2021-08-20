@@ -57,8 +57,9 @@ a:hover, a:focus {
 }
 
 body {
-  line-height: 24px;
+  line-height: 27px;
   font-size: 16px;
+  font-weight: 300;
   color: #333333;
   letter-spacing: .025em;
   font-family: "Raleway", sans-serif;
