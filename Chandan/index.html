@@ -96,7 +96,7 @@
                         <div class="row person_details">
                             <h3 style="font-family: 'poppins-bold';">Hi I'm <span>Chandan kumar</span></h3>
                             <h4 style="font-family: 'poppins-bold';">Front-end Developer</h4>
-                            <p>I’m a developer, writer. I work at <a href="https://www.itsforyou.live/">ITSFORYOU</a> as a Software Engineer(Front-end Developer). I am 22 years old. Since 2018 I am working in this field. I am
+                            <p>I’m a developer, writer. I work at <a href="https://www.itsforyou.live/">ITSFORYOU</a> as a <span id="someday"> <h4 style=" margin: 0 0 0.5rem 0;">Software Engineer(Front-end Developer)</h4></span>. I am 22 years old. Since 2018 I am working in this field. I am
                                 professional in HTML5, CSS3, Twitter-bootstrap, Jquery, Angular 10, WordPress etc
                                 </p>
                             <div class="person_information">
@@ -684,6 +684,18 @@ font-weight: bold;
         </div>
     </div>
 
+        
+        
+        <script>
+        import { annotate } from "https://unpkg.com/rough-notation?module";
+
+const n1 = document.querySelector("#someday");
+const a1 = annotate(n1, { type: "highlight", color: "yellow", padding: 15 });
+            
+a1.show();
+
+        
+        </script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-2.1.4.min.js"></script>
