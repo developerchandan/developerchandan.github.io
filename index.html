@@ -1,16 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Chandan</title>
+        <title>Chandan Kumar - Full Stack Developer</title>
         <link rel="icon" href="image/fav-icon.png" />
 
         <!-- fonts -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <!-- Bootstrap css -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -19,21 +20,105 @@
         <link href="css/style.css" rel="stylesheet">
         <link href="css/responsive.css" rel="stylesheet">
 
+        <style>
+            .social-links {
+                margin: 20px 0;
+                text-align: center;
+            }
+            .social-links a {
+                display: inline-block;
+                margin: 0 10px;
+                font-size: 24px;
+                color: #333;
+                transition: all 0.3s ease;
+            }
+            .social-links a:hover {
+                transform: translateY(-3px);
+                color: #0077b5; /* LinkedIn blue */
+            }
+            .designation {
+                font-size: 20px;
+                color: #555;
+                margin-bottom: 20px;
+                font-weight: 500;
+            }
+            .btn-demo {
+                background: #4CAF50;
+                color: white;
+                padding: 12px 24px;
+                border-radius: 4px;
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+                margin-top: 20px;
+                transition: all 0.3s ease;
+            }
+            .btn-demo:hover {
+                background: #45a049;
+                transform: translateY(-2px);
+                color: white;
+                text-decoration: none;
+            }
+        </style>
     </head>
-    <!--
-    ================================================== -->
 
     <body>
-    
     
     <!-- Header-->
     <div class="header">
         <div class="header-top">
             <div class="logo"><a href="index.html"></a></div>
-            <h3 style="font-size:36px">Welcome To Chandan Kumar Profile</h3>
+            <h3 style="font-size:36px; margin-bottom: 10px;">Welcome To Chandan Kumar's Portfolio</h3>
+            <div class="designation">Full Stack Developer (MEAN Stack)</div>
+            
+            <div class="social-links">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/developerchandan/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/developerchandan" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- Medium -->
+                <a href="https://medium.com/@developerchandan" target="_blank" title="Medium">
+                    <i class="fab fa-medium"></i>
+                </a>
+                <!-- Twitter -->
+                <a href="https://twitter.com/_chandan0" target="_blank" title="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/developerchandan" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/_chandan.ydv/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Reddit -->
+                <a href="https://www.reddit.com/user/developerchandan" target="_blank" title="Reddit">
+                    <i class="fab fa-reddit"></i>
+                </a>
+                <!-- Stack Overflow -->
+                <a href="https://stackoverflow.com/users/developerchandan" target="_blank" title="Stack Overflow">
+                    <i class="fab fa-stack-overflow"></i>
+                </a>
+                <!-- Substack -->
+                <a href="https://developerchandan.substack.com/" target="_blank" title="Newsletter">
+                    <i class="fas fa-newspaper"></i>
+                </a>
+            </div>
+            
             <div class="title-page">
                 <div class="title"><h1>Chandan Kumar</h1></div>
-                <a  class="btn-demo"target="_blank" class="view-btn hvr-bounce-to-right" href="Chandan/index.html">Click Here</a>
+                <p style="max-width: 600px; margin: 0 auto 20px; line-height: 1.6;">
+                    Experienced Full Stack Developer with 4+ years in MEAN stack development. 
+                    Currently working at Crowe UAE, previously at Stuvalley Technology.
+                </p>
+                <a class="btn-demo" target="_blank" class="view-btn hvr-bounce-to-right" href="Chandan/index.html">
+                    View Full Portfolio
+                </a>
             </div>
         </div> 
     </div><!-- End-Header-->
@@ -45,6 +130,16 @@
     <script src="js/custome.js"></script>
     <script>
         smoothScroll.init();
+        
+        // Add animation to social icons
+        document.querySelectorAll('.social-links a').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
     </script>
     </body>
 </html>
