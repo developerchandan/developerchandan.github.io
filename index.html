@@ -1,145 +1,604 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Chandan Kumar - Full Stack Developer</title>
-        <link rel="icon" href="image/fav-icon.png" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandan Kumar - Full Stack Developer CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <!-- fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <!-- Bootstrap css -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="vendors/linear-icon/style.css">		
-        <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #333;
+            background: #fff;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 10mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
 
-        <style>
-            .social-links {
-                margin: 20px 0;
-                text-align: center;
-            }
-            .social-links a {
-                display: inline-block;
-                margin: 0 10px;
-                font-size: 24px;
-                color: #333;
-                transition: all 0.3s ease;
-            }
-            .social-links a:hover {
-                transform: translateY(-3px);
-                color: #0077b5; /* LinkedIn blue */
-            }
-            .designation {
-                font-size: 20px;
-                color: #555;
-                margin-bottom: 20px;
-                font-weight: 500;
-            }
-            .btn-demo {
-                background: #4CAF50;
-                color: white;
-                padding: 12px 24px;
-                border-radius: 4px;
-                text-decoration: none;
-                font-weight: bold;
-                display: inline-block;
-                margin-top: 20px;
-                transition: all 0.3s ease;
-            }
-            .btn-demo:hover {
-                background: #45a049;
-                transform: translateY(-2px);
-                color: white;
-                text-decoration: none;
-            }
-        </style>
-    </head>
+        .cv-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 15px;
+        }
 
-    <body>
-    
-    <!-- Header-->
-    <div class="header">
-        <div class="header-top">
-            <div class="logo"><a href="index.html"></a></div>
-            <h3 style="font-size:36px; margin-bottom: 10px;">Welcome To Chandan Kumar's Portfolio</h3>
-            <div class="designation">Full Stack Developer (MEAN Stack)</div>
-            
-            <div class="social-links">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/developerchandan/" target="_blank" title="LinkedIn">
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+            border: 3px solid #2563eb;
+        }
+
+        .header-info h1 {
+            font-size: 24px;
+            color: #2563eb;
+            margin-bottom: 5px;
+        }
+
+        .header-info .title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 11px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-item i {
+            color: #2563eb;
+            width: 12px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            font-size: 14px;
+        }
+
+        .summary {
+            background: #f8f9fa;
+            padding: 12px;
+            border-left: 4px solid #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .experience-item::before, .education-item::before, .project-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 8px;
+            height: 8px;
+            background: #2563eb;
+            border-radius: 50%;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .experience-header h4, .project-header h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .experience-header .company, .project-header .tech {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .experience-date, .project-date {
+            font-size: 11px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .experience-location {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .experience-item ul, .project-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li, .project-item li {
+            margin-bottom: 3px;
+            font-size: 11px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .experience-item li::before, .project-item li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2563eb;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category h5 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 8px;
+        }
+
+        .skill-item {
+            display: inline-block;
+            margin-right: 12px;
+            margin-bottom: 6px;
+        }
+
+        .skill-name {
+            font-size: 11px;
+            background: #f8f9fa;
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .education-item h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2563eb;
+            margin-bottom: 3px;
+        }
+
+        .certification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .certification-institution {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .certification-date {
+            font-size: 11px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #2563eb;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        @media print {
+            body {
+                box-shadow: none;
+                padding: 0;
+                max-width: none;
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .skill-item {
+                margin-right: 8px;
+                margin-bottom: 4px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            animation: fadeIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-header">
+        <img src="Chandan/img/member/vv.jpg" alt="Chandan Kumar" class="profile-img">
+        <div class="header-info">
+            <h1>Chandan Kumar</h1>
+            <p class="title">Full Stack Developer (MEAN Stack, .NET, C#)</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Sharjah, Sharjah Emirate, United Arab Emirates</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+971503917353</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>chandanku845415@gmail.com</span>
+                </div>
+                <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                </a>
-                <!-- GitHub -->
-                <a href="https://github.com/developerchandan" target="_blank" title="GitHub">
+                    <span>linkedin.com/in/developerchandan</span>
+                </div>
+                <div class="contact-item">
                     <i class="fab fa-github"></i>
-                </a>
-                <!-- Medium -->
-                <a href="https://medium.com/@developerchandan" target="_blank" title="Medium">
-                    <i class="fab fa-medium"></i>
-                </a>
-                <!-- Twitter -->
-                <a href="https://twitter.com/_chandan0" target="_blank" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/developerchandan" target="_blank" title="Facebook">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/_chandan.ydv/" target="_blank" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <!-- Reddit -->
-                <a href="https://www.reddit.com/user/developerchandan" target="_blank" title="Reddit">
-                    <i class="fab fa-reddit"></i>
-                </a>
-                <!-- Stack Overflow -->
-                <a href="https://stackoverflow.com/users/developerchandan" target="_blank" title="Stack Overflow">
-                    <i class="fab fa-stack-overflow"></i>
-                </a>
-                <!-- Substack -->
-                <a href="https://developerchandan.substack.com/" target="_blank" title="Newsletter">
-                    <i class="fas fa-newspaper"></i>
-                </a>
+                    <span>github.com/developerchandan</span>
+                </div>
             </div>
-            
-            <div class="title-page">
-                <div class="title"><h1>Chandan Kumar</h1></div>
-                <p style="max-width: 600px; margin: 0 auto 20px; line-height: 1.6;">
-                    Experienced Full Stack Developer with 4+ years in MEAN stack development. 
-                    Currently working at Crowe UAE, previously at Stuvalley Technology.
-                </p>
-                <a class="btn-demo" target="_blank" class="view-btn hvr-bounce-to-right" href="Chandan/index.html">
-                    View Full Portfolio
-                </a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <i class="fas fa-user"></i>
+            Summary
+        </div>
+        <div class="summary">
+            Proficient MEAN Stack Developer with 4.5 years of experience in building dynamic, scalable, and secure web applications using MongoDB, Express.js, Angular, and Node.js. Expertise in full-stack development, responsive design, and delivering high-performance solutions. Skilled in implementing AI solutions in full stack development. Experience in edutech, real estate, and GRC (Governance Risk Compliance) sectors.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <i class="fas fa-briefcase"></i>
+            Experience
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h4>Software Engineer (Full Stack Developer)</h4>
+                    <div class="company">Crowe UAE, Dubai, UAE</div>
+                </div>
+                <div class="experience-date">March 2025 – Present</div>
             </div>
-        </div> 
-    </div><!-- End-Header-->
-   
-  
-    <script src="js/jquery-2.2.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/custome.js"></script>
-    <script>
-        smoothScroll.init();
+            <ul>
+                <li>Developing and maintaining enterprise applications using Angular and .NET</li>
+                <li>Implementing responsive UI components with Angular Material</li>
+                <li>Building RESTful APIs with Node.js and .NET Core</li>
+                <li>Optimizing application performance and implementing best practices</li>
+                <li>Working in GRC (Governance Risk Compliance) sector</li>
+                <li>Implementing AI solutions in full stack development</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h4>Full Stack Developer</h4>
+                    <div class="company">Stuvalley Technology Pvt. Ltd, Gurgram, Haryana</div>
+                </div>
+                <div class="experience-date">May 2022 – March 2025</div>
+            </div>
+            <ul>
+                <li>Developed multiple web applications using MEAN stack (MongoDB, Express, Angular, Node.js)</li>
+                <li>Implemented authentication and authorization systems using JWT</li>
+                <li>Worked with SQL and NoSQL databases for data storage and retrieval</li>
+                <li>Collaborated with cross-functional teams to deliver high-quality software</li>
+                <li>Mentored junior developers and conducted code reviews</li>
+                <li>Learned new skills: .NET, SQL Server, C#</li>
+                <li>Worked in edutech and real estate sectors</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h4>Web Designer</h4>
+                    <div class="company">Xperge Pvt. Ltd, Ajitgarh, Punjab</div>
+                </div>
+                <div class="experience-date">Jan 2022 – May 2022</div>
+            </div>
+            <ul>
+                <li>Designed responsive web interfaces for real estate portal</li>
+                <li>Optimized UX across devices and screen sizes</li>
+                <li>Resolved front-end bugs and enhanced reliability</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <div>
+                    <h4>Front End Developer</h4>
+                    <div class="company">RTSS Pvt. Ltd, Maloya Colony, Chandigarh</div>
+                </div>
+                <div class="experience-date">Aug 2021 – Dec 2021</div>
+            </div>
+            <ul>
+                <li>Implemented responsive design for real estate portal</li>
+                <li>Fixed bugs to improve user experience</li>
+                <li>Delivered efficient front-end solutions</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <i class="fas fa-graduation-cap"></i>
+            Education
+        </div>
+        <div class="education-item">
+            <h4>Bachelor of Technology in Computer Science and Engineering</h4>
+            <div class="institution">Dr. A. P. J. Abdul Kalam Technical University, Lucknow</div>
+            <div class="period">Aug. 2016 – Sep. 2020, Meerut, UP</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <i class="fas fa-cogs"></i>
+            Technical Skills
+        </div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h5>Frontend Development</h5>
+                <div class="skill-item">
+                    <div class="skill-name">HTML</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">CSS</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">TypeScript</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Angular (6-16)</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Bootstrap</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">PrimeNG</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h5>Backend Development</h5>
+                <div class="skill-item">
+                    <div class="skill-name">Node.js</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">MongoDB</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Express.js</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">.NET</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">SQL Server</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">C#</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">RESTful API</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h5>Tools & Technologies</h5>
+                <div class="skill-item">
+                    <div class="skill-name">Git & GitHub</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">AWS (S3, IAM)</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">WordPress</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Payment Gateway</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Digital Marketing & SEO</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">ChatGPT</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Grok</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Claude</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Canva</div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Nginx</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <i class="fas fa-project-diagram"></i>
+            Projects
+        </div>
+        <div class="project-item">
+            <div class="project-header">
+                <h4>Navrojan (Job Portal)</h4>
+                <div class="project-date">May 2022 - Dec 2022</div>
+            </div>
+            <div class="tech"><strong>Frontend:</strong> HTML, CSS, Bootstrap, JS, Angular | <strong>Backend:</strong> Node.js, MongoDB, Express | <strong>Tools:</strong> Git, Postman</div>
+            <ul>
+                <li>Spearheaded development with features similar to popular job portals</li>
+                <li>Implemented job posting, employer section, job listing, filtering</li>
+                <li>Developed user sections inspired by Naukri</li>
+                <li><a href="#" target="_blank">View Project</a> | <a href="#" target="_blank">Video Demo</a></li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-header">
+                <h4>Prayug (E-learning Training Portal)</h4>
+                <div class="project-date">Jan 2023 - Aug 2024</div>
+            </div>
+            <div class="tech"><strong>Frontend:</strong> HTML, CSS, Angular | <strong>Backend:</strong> Node.js, MongoDB, Express | <strong>Tools:</strong> Git, AWS S3</div>
+            <ul>
+                <li>Led development with features comparable to leading platforms</li>
+                <li>Implemented course creation, enrollment, content delivery, progress tracking</li>
+                <li>Integrated Google Login and mobile OTP login</li>
+                <li>Optimized with SEO and meta-tagging</li>
+                <li>Handled frontend, backend, admin CRM, Instructor CRM as single developer</li>
+                <li><a href="#" target="_blank">View Project</a> | <a href="#" target="_blank">Video Demo</a></li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-header">
+                <h4>Sudakshta (Psychometric Test Platform)</h4>
+                <div class="project-date">Aug 2024 - Dec 2024</div>
+            </div>
+            <div class="tech"><strong>Frontend:</strong> HTML, CSS, Angular | <strong>Backend:</strong> Node.js, MongoDB, Express | <strong>Tools:</strong> Git, Chart.js</div>
+            <ul>
+                <li>Pioneered development with features comparable to leading systems</li>
+                <li>Engineered test creation, user assessment, result analysis, feedback</li>
+                <li><a href="#" target="_blank">View Project</a> | <a href="#" target="_blank">Video Demo</a></li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-header">
+                <h4>Jobluu (Job Portal)</h4>
+                <div class="project-date">Dec 2023 - Present</div>
+            </div>
+            <div class="tech"><strong>Frontend:</strong> HTML, CSS, JS, Angular | <strong>Backend:</strong> Node.js, MongoDB, Express.js | <strong>Tools:</strong> Git, SEO tools</div>
+            <ul>
+                <li>Designed and developed comprehensive job portal</li>
+                <li>Implemented job posting, application, search, filtering, resume upload</li>
+                <li>Added blogging section for career resources</li>
+                <li>Managed as single handler</li>
+                <li><a href="#" target="_blank">View Project</a> | <a href="#" target="_blank">Video Demo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">
+            <i class="fas fa-certificate"></i>
+            Certifications
+        </div>
+        <div class="education-item">
+            <h4>Software Engineer Intern</h4>
+            <div class="certification-header">
+                <div class="certification-institution">FoundLay Technologies Pvt. Ltd.</div>
+                <div class="certification-date">Issued: 2019</div>
+            </div>
+        </div>
+        <div class="education-item">
+            <h4>MEAN Stack Development</h4>
+            <div class="certification-header">
+                <div class="certification-institution">Udemy</div>
+                <div class="certification-date">Issued: 2024</div>
+            </div>
+        </div>
+        <div class="education-item">
+            <h4>Angular Basic</h4>
+            <div class="certification-header">
+                <div class="certification-institution">HackerRank</div>
+                <div class="certification-date">Issued: 2025</div>
+            </div>
+        </div>
+        <div class="education-item">
+            <h4>Angular Intermediate</h4>
+            <div class="certification-header">
+                <div class="certification-institution">HackerRank</div>
+                <div class="certification-date">Issued: 2025</div>
+            </div>
+        </div>
+        <div class="education-item">
+            <h4>CSS Basic</h4>
+            <div class="certification-header">
+                <div class="certification-institution">HackerRank</div>
+                <div class="certification-date">Issued: 2023</div>
+            </div>
+        </div>
         
-        // Add animation to social icons
-        document.querySelectorAll('.social-links a').forEach(link => {
-            link.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
-            link.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
-    </script>
-    </body>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Chandan Kumar. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/developerchandan" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/developerchandan/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://twitter.com/_chandan0" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="https://medium.com/@developerchandan" target="_blank"><i class="fab fa-medium"></i> Medium</a>
+        </div>
+    </div>
+</body>
 </html>
